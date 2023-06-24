@@ -11,11 +11,12 @@ namespace Algorithms
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Enter username:");
-            // Create a string variable and get user input from the keyboard and store it in the variable
-            string userName = Console.ReadLine();
-            // Print the value of the variable (userName), which will display the input value
-            Console.WriteLine("Username is: " + userName);
+            
+            //Console.WriteLine("Enter username:");
+            //// Create a string variable and get user input from the keyboard and store it in the variable
+            //string userName = Console.ReadLine();
+            //// Print the value of the variable (userName), which will display the input value
+            //Console.WriteLine("Username is: " + userName);
             var watch = new System.Diagnostics.Stopwatch();
             watch.Start();
             // Mergsort
@@ -31,11 +32,12 @@ namespace Algorithms
             }
             int len = rnd.Next(1, 20);
             //List<int> A = myList.GetRange(50, len);
-            List<int> A = new List<int>() { 12, 3, 7, 9, 14, 6, 11, 2 };
+            List<int> A = new List<int>() { 12, 3};
             p = 0;
             r = A.Count() - 1;
             q = p + (r - p) / 2;
-            var s = MergeSort.merge_sort(A, p, r);
+            var s = BubbleSort.Bubble_Sort(A,1);
+            //var s = MergeSort.merge_sort(A, p, r);
             watch.Stop();
             Console.WriteLine($"Execution Time: {watch.ElapsedMilliseconds} ms");
         }
